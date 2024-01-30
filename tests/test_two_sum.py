@@ -27,6 +27,19 @@ class TestTwoSum(TestCase):
 
     def test_two_sum_failed_input_types(self, mock_print_statement):
         mock_print_statement.return_value = "abc"
+
+class TestTwoSum(TestCase):
+    # the name of the class is the name of the file
+    def setUp(self) -> None:
+        self.input_array = [2, 7, 11, 15]
+
+    def test_two_sum(self):
+        # the name of the function is the function we are testing
+        target = 9
+        expected_output = [0, 1]
+        self.assertEqual(two_sum(self.input_array, target), expected_output)
+
+    def test_two_sum_failed_input_types(self):
         target = "some string"
         with self.assertRaises(TypeError) as context:
             two_sum(self.input_array, target)

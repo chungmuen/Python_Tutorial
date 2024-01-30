@@ -46,3 +46,5 @@ docstr-coverage mylib/ --fail-under=100 --badge="./docs_badge.svg"
 generate readthedocs
 .\docs\make.bat html
 
+python tutorial about testing
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Module to store utility functions for test purposes.
 """
@@ -14,12 +15,16 @@ def two_sum(nums, target):
     :raises TypeError: if the target is not a number
     """
     print_statement('statement')
+=======
+def two_sum(nums, target):
+>>>>>>> a233a922c569484038fca418e1cfa870b7f74d59
     if isinstance(target, str):
         raise TypeError("The target should be a number.")
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
             if nums[j] == target - nums[i]:
                 return [i, j]
+<<<<<<< HEAD
 
 
 def print_statement(statement):
@@ -52,3 +57,5 @@ def create_download_directory():
 #    create_download_directory()
 # AVOID HAVING MAIN in a library!
 
+=======
+>>>>>>> a233a922c569484038fca418e1cfa870b7f74d59
