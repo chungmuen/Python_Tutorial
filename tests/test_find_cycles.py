@@ -6,12 +6,13 @@ from mylib.utils import find_cycles
 class TestFindCycles(TestCase):
     # the name of the class is the name of the file
     """
-    ex: there are methods that are executed before/after all or each tests, cleans variables, ex, resetting global variables between sets of tests """
+    ex: there are methods that are executed before/after all or each tests, cleans variables, ex, resetting global
+    variables between sets of tests
+    """
 
     def setUp(self) -> None:
         """set up method is executed before each test, and that allows sharing data between tests"""
         self.input_graph = {0: [1, 2], 1: [2], 2: [3], 3: [0]}
-
 
     def test_find_cycles(self):
         """

@@ -3,10 +3,14 @@ from unittest import TestCase
 from mylib.utils import build_graph
 
 INPUT_EDGES = [(0, 1), (0, 2), (1, 2), (2, 3), (3, 0)]
+
+
 class TestBuildGraph(TestCase):
     # the name of the class is the name of the file
     """
-    ex: there are methods that are executed before/after all or each tests, cleans variables, ex, resetting global variables between sets of tests """
+    ex: there are methods that are executed before/after all or each tests, cleans variables, ex, resetting global
+    variables between sets of tests
+    """
 
     def test_build_graph(self):
         """

@@ -19,4 +19,3 @@ class TestTwoSum(TestCase):
         with self.assertRaises(TypeError) as context:
             two_sum(self.input_array, target)
         self.assertEqual(str(context.exception), "The target should be a number.")
-
