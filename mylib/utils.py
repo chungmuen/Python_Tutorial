@@ -6,6 +6,8 @@ from collections import deque
 # importing os vs. importing os.path has no impact in python, but can add impact in other languages
 
 VAR = 'slkjfdl'
+
+
 def two_sum(nums, target):
     """ Find the index of the two first numbers that add up to target.
 
@@ -14,9 +16,6 @@ def two_sum(nums, target):
     :return: a list of the index of the two numbers
     :raises TypeError: if the target is not a number
     """
-    print_statement('statement')
-
-def two_sum(nums, target):
 
     if isinstance(target, str):
         raise TypeError("The target should be a number.")
@@ -24,16 +23,6 @@ def two_sum(nums, target):
         for j in range(i + 1, len(nums)):
             if nums[j] == target - nums[i]:
                 return [i, j]
-
-
-def print_statement(statement):
-    """ prints a statement
-
-    :param statement: a string
-    :return: a string
-    """
-    print(statement)
-    return '123'
 
 
 def create_download_directory():
@@ -109,14 +98,14 @@ def find_cycles(graph):
     for start_node in graph:
         queue = deque([(start_node, [start_node])])
         while queue:
-            current_node, path = queue.popleft()
+            current_node, node_path = queue.popleft()
             for neighbor in graph.get(current_node, []):
-                cycle_members = set(path + [neighbor])
+                cycle_members = set(node_path + [neighbor])
                 if neighbor == start_node and cycle_members not in cycles_members:
-                    cycles.append(tuple(path + [neighbor]))
+                    cycles.append(tuple(node_path + [neighbor]))
                     cycles_members.append(cycle_members)
-                elif neighbor not in path:
-                    queue.append((neighbor, path + [neighbor]))
+                elif neighbor not in node_path:
+                    queue.append((neighbor, node_path + [neighbor]))
     return cycles
 
 
