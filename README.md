@@ -63,3 +63,4 @@ Profiling - rather advanced for developers in python
 you can have many small commits, and then squash them during pull requests
 
 It's ok to make mistakes, but it is VERY IMPORTANT to be consistant!!
+Github understand that PascalCase needs to be two separate words for branch names, so when creating new branches in terminal, we can give names in PascalCases 
