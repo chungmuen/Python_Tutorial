@@ -13,6 +13,7 @@ def two_sum(nums, target):
 
     :param nums: a list of numbers
     :param target: the value to reach
+
     :return: a list of the index of the two numbers
     :raises TypeError: if the target is not a number
     """
@@ -42,22 +43,18 @@ def create_download_directory():
 
 
 def build_graph(edges):
-    """Converts a list of directed edges into a graph represented as a dictionary.
+    """ Converts a list of directed edges into a graph represented as a dictionary. This function takes a list of
+    tuples, where each tuple represents a directed edge from one node to another in the graph. The graph is represented
+    as a dictionary where each key is a node and its value is a list of all nodes it has edges to.
 
-    This function takes a list of tuples, where each tuple represents a directed edge
-    from one node to another in the graph. The graph is represented as a dictionary
-    where each key is a node and its value is a list of all nodes it has edges to.
+    :param: edges (list of tuples): Each tuple contains two elements, representing a directional link from the first
+        element (source node) to the second element (destination node).
 
-    :param: edges (list of tuples): Each tuple contains two elements, representing a
-      directional link from the first element (source node) to the second element
-      (destination node).
+    :return: dict: A dictionary representation of the graph where keys are source nodes and values are lists of
+        destination nodes.
 
-    :return: dict: A dictionary representation of the graph where keys are source nodes
-      and values are lists of destination nodes.
-
-    Example:
-    Given edges [(0, 1), (0, 2), (1, 2), (2, 3)], the function returns
-    {0: [1, 2], 1: [2], 2: [3]}.
+    :example: Given edges [(0, 1), (0, 2), (1, 2), (2, 3)], the function returns
+        {0: [1, 2], 1: [2], 2: [3]}.
     """
     graph = {}
     for edge in edges:
@@ -79,19 +76,17 @@ def find_cycles(graph):
     has not been encountered before, it records this cycle.
 
     :param: graph (dict): A graph represented as a dictionary where each key is a node and
-      its value is a list of nodes it has edges to.
+        its value is a list of nodes it has edges to.
 
     :return: list of tuples: Each tuple contains nodes forming a cycle, including the starting
-      node repeated at the end to signify the cycle closure.
+        node repeated at the end to signify the cycle closure.
 
-    Note:
-    The function ensures that each cycle is unique based on the members of the cycle,
-    not the starting point of the cycle in the path. Cycles that contain the same set
-    of nodes but start at different points are considered the same and only one is returned.
+    :example: Given a graph {0: [1, 2], 1: [2], 2: [3], 3: [0]}, the function may return
+        [(0, 1, 2, 3, 0), (0, 2, 3, 0)] as it identifies the cycles in the graph.
 
-    Example:
-    Given a graph {0: [1, 2], 1: [2], 2: [3], 3: [0]}, the function may return
-    [(0, 1, 2, 3, 0), (0, 2, 3, 0)] as it identifies the cycles in the graph.
+    :note: The function ensures that each cycle is unique based on the members of the cycle,
+        not the starting point of the cycle in the path. Cycles that contain the same set
+        of nodes but start at different points are considered the same and only one is returned.
     """
     cycles = []
     cycles_members = []
