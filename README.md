@@ -42,9 +42,24 @@ javascript transpiling
 ### docstring badge
 docstr-coverage mylib/ --fail-under=100 --badge="./docs_badge.svg"
 
-###
-generate readthedocs
+
+### generate readthedocs
 .\docs\make.bat html
 
 python tutorial about testing
 
+### next time
+- commit the badge inside our github action (need a special tocken from inside github)
+- codacy for coverage report and general code quality report
+- codacy scans the code, detect for replicated fragments
+- host the doc on readthedocs, and let readthedocs build our documentation
+
+## 20240215
+
+No need to add docstring for tests
+look documentation: in python terminal, import a module, then type help(module_name)
+right - click on folder "test" : more Run/Debug - run python test with coverage
+Profiling - rather advanced for developers in python
+you can have many small commits, and then squash them during pull requests
+
+It's ok to make mistakes, but it is VERY IMPORTANT to be consistant!!
