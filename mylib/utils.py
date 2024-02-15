@@ -53,19 +53,17 @@ def create_download_directory():
 
 
 def build_graph(edges):
-    """ Converts a list of directed edges into a graph represented as a dictionary.
+    """Converts a list of directed edges into a graph represented as a dictionary.
 
     This function takes a list of tuples, where each tuple represents a directed edge
     from one node to another in the graph. The graph is represented as a dictionary
     where each key is a node and its value is a list of all nodes it has edges to.
 
-    Parameters:
-    - edges (list of tuples): Each tuple contains two elements, representing a
+    :param: edges (list of tuples): Each tuple contains two elements, representing a
       directional link from the first element (source node) to the second element
       (destination node).
 
-    Returns:
-    - dict: A dictionary representation of the graph where keys are source nodes
+    :return: dict: A dictionary representation of the graph where keys are source nodes
       and values are lists of destination nodes.
 
     Example:
@@ -91,12 +89,10 @@ def find_cycles(graph):
     that completes a cycle back to the starting node, and the set of nodes in the cycle
     has not been encountered before, it records this cycle.
 
-    Parameters:
-    - graph (dict): A graph represented as a dictionary where each key is a node and
+    :param: graph (dict): A graph represented as a dictionary where each key is a node and
       its value is a list of nodes it has edges to.
 
-    Returns:
-    - list of tuples: Each tuple contains nodes forming a cycle, including the starting
+    :return: list of tuples: Each tuple contains nodes forming a cycle, including the starting
       node repeated at the end to signify the cycle closure.
 
     Note:
